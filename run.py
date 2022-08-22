@@ -7,8 +7,8 @@ extraInfoAskDone = 0
 password = ""
 
 while generatorStartDone == 0:
-    passwordGeneratorStart = input(" * Do you need a password? Y/N *\n")
-    if ((passwordGeneratorStart == "Y") or (passwordGeneratorStart == "y")):
+    passwordGeneratorStart = upper(str(input(" * Do you need a password? Y/N *\n")))
+    if passwordGeneratorStart == "Y":
         
         generatorStartDone = 1
         
@@ -19,15 +19,14 @@ while generatorStartDone == 0:
         numbers = str(1234567890)
 
         #Asks user how long the password should be
-        lengthString = input(" * How long would you like your password? *\n")
-        length = int(lengthString)
+        length = int(input(" * How long would you like your password? *\n"))
 
         # Asks the user if they want symbols & numbers or just letters
         while symbolsQuestionDone == 0:
-            yesSymbols = str(input(" * Do you want symbols & numbers Y/N *\n"))
+            yesSymbols = upper(str(input(" * Do you want symbols & numbers Y/N *\n")))
             
             # Randomizes a letter, symbol and number based password
-            if ((yesSymbols == "Y") or (yesSymbols =="y")):
+            if yesSymbols == "Y":
                 for x in range(length):
                     keyType = random.randint(0,3)
                     if keyType == 0:
@@ -45,7 +44,7 @@ while generatorStartDone == 0:
                 symbolsQuestionDone = 1
 
             # Randomizes a letter-only password
-            elif ((yesSymbols == "N") or (yesSymbols == "n")): 
+            elif yesSymbols == "N": 
                 for x in range(length):
                     keyType = random.randint(0,1)
                     if keyType == 0:
@@ -71,7 +70,7 @@ while generatorStartDone == 0:
 
         # Asks user for any extra information
         while extraInfoAskDone == 0:
-            extraInfoAsk = str(input(" * Do you want to add anything else? Y/N *\n"))
+            extraInfoAsk = upper(str(input(" * Do you want to add anything else? Y/N *\n")))
             if extraInfoAsk == "Y" or extraInfoAsk == "y":
                 extraInfo = str(input(" * What do you want to add? *\n"))
                 extraInfoAskDone = 1
@@ -98,7 +97,7 @@ while generatorStartDone == 0:
         print("Awesome! Your login information was saved!")
         return 0:
 
-    elif ((passwordGeneratorStart == "N") or (passwordGeneratorStart == "n")):
+    elif passwordGeneratorStart == "N":
         
         generatorStartDone = 1
 
@@ -116,7 +115,7 @@ while generatorStartDone == 0:
 
         # Asks user for any extra information
         while extraInfoAskDone == 0:
-            extraInfoAsk = str(input(" * Do you want to add anything else? Y/N *\n"))
+            extraInfoAsk = upper(str(input(" * Do you want to add anything else? Y/N *\n")))
             if extraInfoAsk == "Y" or extraInfoAsk == "y":
                 extraInfo = str(input(" * What do you want to add? *\n"))
                 extraInfoAskDone = 1
