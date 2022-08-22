@@ -7,7 +7,7 @@ extraInfoAskDone = 0
 password = ""
 
 while generatorStartDone == 0:
-    passwordGeneratorStart = upper(str(input(" * Do you need a password? Y/N *\n")))
+    passwordGeneratorStart = str(input(" * Do you need a password? Y/N *\n")).upper()
     if passwordGeneratorStart == "Y":
         
         generatorStartDone = 1
@@ -23,7 +23,7 @@ while generatorStartDone == 0:
 
         # Asks the user if they want symbols & numbers or just letters
         while symbolsQuestionDone == 0:
-            yesSymbols = upper(str(input(" * Do you want symbols & numbers Y/N *\n")))
+            yesSymbols = str(input(" * Do you want symbols & numbers Y/N *\n")).upper()
             
             # Randomizes a letter, symbol and number based password
             if yesSymbols == "Y":
@@ -70,7 +70,7 @@ while generatorStartDone == 0:
 
         # Asks user for any extra information
         while extraInfoAskDone == 0:
-            extraInfoAsk = upper(str(input(" * Do you want to add anything else? Y/N *\n")))
+            extraInfoAsk = str(input(" * Do you want to add anything else? Y/N *\n")).upper()
             if extraInfoAsk == "Y" or extraInfoAsk == "y":
                 extraInfo = str(input(" * What do you want to add? *\n"))
                 extraInfoAskDone = 1
@@ -95,7 +95,6 @@ while generatorStartDone == 0:
 
         # Verifies Completion
         print("Awesome! Your login information was saved!")
-        return 0:
 
     elif passwordGeneratorStart == "N":
         
@@ -115,7 +114,7 @@ while generatorStartDone == 0:
 
         # Asks user for any extra information
         while extraInfoAskDone == 0:
-            extraInfoAsk = upper(str(input(" * Do you want to add anything else? Y/N *\n")))
+            extraInfoAsk = str(input(" * Do you want to add anything else? Y/N *\n")).upper()
             if extraInfoAsk == "Y" or extraInfoAsk == "y":
                 extraInfo = str(input(" * What do you want to add? *\n"))
                 extraInfoAskDone = 1
@@ -140,7 +139,6 @@ while generatorStartDone == 0:
 
         # Verifies Completion
         print("Awesome! Your login information was saved!")
-        return 0:
 
     else:
         print(" * Invalid input *\n") # Returns Error
