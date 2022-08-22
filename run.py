@@ -27,7 +27,7 @@ while generatorStartDone == 0:
             yesSymbols = str(input(" * Do you want symbols & numbers Y/N *\n"))
             
             # Randomizes a letter, symbol and number based password
-            if yesSymbols == "Y":
+            if ((yesSymbols == "Y") or (yesSymbols =="y")):
                 for x in range(length):
                     keyType = random.randint(0,3)
                     if keyType == 0:
@@ -45,7 +45,7 @@ while generatorStartDone == 0:
                 symbolsQuestionDone = 1
 
             # Randomizes a letter-only password
-            elif yesSymbols == "N": 
+            elif ((yesSymbols == "N") or (yesSymbols == "n")): 
                 for x in range(length):
                     keyType = random.randint(0,1)
                     if keyType == 0:
@@ -96,6 +96,7 @@ while generatorStartDone == 0:
 
         # Verifies Completion
         print("Awesome! Your login information was saved!")
+        return 0:
 
     elif ((passwordGeneratorStart == "N") or (passwordGeneratorStart == "n")):
         
@@ -140,6 +141,8 @@ while generatorStartDone == 0:
 
         # Verifies Completion
         print("Awesome! Your login information was saved!")
+        return 0:
 
     else:
         print(" * Invalid input *\n") # Returns Error
+    
