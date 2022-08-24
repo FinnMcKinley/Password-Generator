@@ -96,6 +96,7 @@ while generatorStartDone == 0:
         passwordFile.write(str(password))
         passwordFile.write("\n")
         passwordFile.write(extraInfo)
+        passwordFile.write("\n")
 
         # Verifies Completion
         print("Awesome! Your login information was saved!")
