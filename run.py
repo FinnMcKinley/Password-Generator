@@ -59,6 +59,10 @@ while generatorStartDone == 0:
             else:
                 print(" * Invalid input *\n")
 
+        # Confirms Password
+        print(" * Your password is: *\n")
+        print(password, "\n")
+
         # Asks user what the service is
         companyName = str(input(" * What is the name of the service/app? *\n"))
 
